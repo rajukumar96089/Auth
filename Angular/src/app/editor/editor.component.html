@@ -1,0 +1,39 @@
+<!-- <div class="container">
+    <header class="header">
+      <h1>AngularEditor</h1>
+      <p>Native WYSIWYG editor for Angular 6+ and 13+</p>    
+    </header>
+      <angular-editor [(ngModel)]="htmlContent" [config]="config"></angular-editor>
+    <h5 class="html-header">HTML Output</h5>
+    <div class="html">
+      {{ htmlContent }}
+    </div>
+    <div><button   mat-raised-button color="primary" (click)=" SendFax()">Send Fax</button></div> -->
+
+    <!-- <div class="container" >
+      
+      <div ><angular-editor [(ngModel)]="htmlContent" [config]="config" id="editor"></angular-editor></div>
+      
+      
+      <div><button mat-raised-button color="primary" (click)="SendFax()">Send Fax</button></div>
+    
+
+      <div><button mat-raised-button color="primary"(click)="generateAndDownloadPDF()">Download PDF</button></div>
+    </div> -->
+    
+    <div class="container">
+      <!-- Your AngularEditor -->
+      <div><angular-editor [(ngModel)]="htmlContent" [config]="config" id="editor"></angular-editor></div>
+    
+      <!-- Button to trigger PDF generation (Send Fax) -->
+      <div><button mat-raised-button color="primary" (click)="SendFax()">Send Fax</button></div>
+    
+      <!-- Input for file upload -->
+      <div>
+        <input type="file" (change)="onFileSelected($event)" accept=".pdf, .doc, .docx"> <!-- Add your desired file formats in the 'accept' attribute -->
+      </div>
+    
+      <!-- Button to trigger PDF generation (Download PDF) -->
+      <div><button mat-raised-button color="primary" (click)="generateAndDownloadPDF()">Download PDF</button></div>
+    </div>
+    

@@ -1,0 +1,8 @@
+<form [formGroup]="verificationForm" (ngSubmit)="Verify(verificationForm.value)">
+    <div class="form-group">
+      <label for="verificationCode">Enter Verification Code:</label>
+      <input type="text" id="verificationCode" formControlName="otp" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Verify</button>
+  </form>
+

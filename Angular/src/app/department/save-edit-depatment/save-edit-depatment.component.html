@@ -1,0 +1,18 @@
+<h1 style="margin-left: 40%;">Department form</h1>
+<!-- <form formGroup="departmentForm" (ngSubmit)="onSubmit(departmentForm.value)" class="form"> -->
+<form [formGroup]="departmentForm"  class="form">
+    <div class="form-field d-flex align-items-center">
+        <span class="far fa-user"></span>
+        <input #name type="text" id="userName" placeholder="name" formControlName="name" required>
+    </div>
+    <div class="form-field d-flex align-items-center">
+        <span class="far fa-user"></span>
+        <input type="text" id="userName" placeholder="email" formControlName="email" required>
+    </div>
+    <div class="form-field d-flex align-items-center">
+        <span class="fas fa-key"></span>
+        <input id="pwd" placeholder="phone" formControlName="phone"required>
+    </div>
+    <button class="btn mt-3"  [disabled]="departmentForm.invalid" (click)="onSubmit(this.departmentForm.value)">Save</button>
+    <button class="btn mt-3"(click)="updateRecord(this.departmentForm.value)">Update</button>
+</form>

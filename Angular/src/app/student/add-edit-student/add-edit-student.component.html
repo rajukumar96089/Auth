@@ -1,0 +1,31 @@
+<div class="form">
+    <form [formGroup]="StudentForm">
+        <h1 style="margin-left: 30%;">Student</h1>
+
+        <div>
+            <span class="far fa-user"></span>
+            <input #name type="text" placeholder="name" formControlName="name">
+            <!-- <span class="text-danger"
+                *ngIf="StudentForm.controls['name'].hasError('required') && (StudentForm.controls['name'].dirty || StudentForm.controls['name'].touched)">This
+                field is required</span> -->
+        </div>
+        <div>
+
+            <input type="text" placeholder="email" formControlName="email">
+        </div>
+        <div>
+            
+            <input type="date" placeholder="dob" formControlName="dob">
+        </div>
+        <div>
+            
+            <input placeholder="city" formControlName="city">
+        </div>
+        <div>
+            
+            <input placeholder="phone" formControlName="phone">
+        </div>
+        <button type="submit" [disabled]="StudentForm.invalid" (click)="onSubmit(StudentForm.value)">Save</button>
+        <button (click)="updateRecord(StudentForm.value)">Update</button>
+    </form>
+</div>

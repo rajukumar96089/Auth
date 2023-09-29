@@ -1,0 +1,77 @@
+/* .form{
+
+display: flex;
+
+justify-content: center;
+display: inline-block;
+display: inline-block;
+
+    border: 1px solid #ccc;
+
+    border-radius: 2px;
+
+    box-sizing: border-box;
+
+    margin-left: 40%;
+
+    margin-top: 10%;
+} */
+/* Center the form */
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  /* Style the form container */
+  form {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+  }
+  
+  /* Style the form title */
+  h1 {
+    /* text-align: center; */
+    margin-bottom: 20px;
+  }
+  
+  /* Style input fields */
+  div {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  input[type="text"],
+  input[type="date"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style the save and update buttons */
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Add more styles as needed */
+  
+  /* Adjust the style as per your design requirements */
+  

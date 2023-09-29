@@ -1,0 +1,14 @@
+<form [formGroup]="baseformGroup">
+    <div formArrayName="details">
+      <div *ngFor="let item of details.controls; let i = index;" [formGroupName]="i">
+        <input formControlName="id" placeholder="id">
+        <input formControlName="name" placeholder="Name">
+        <input formControlName="address" placeholder="Address">
+        <input formControlName="email" placeholder="Email">
+        <input formControlName="phone" placeholder="Phone">
+        <button (click)="addavaibalityitem(i)">Add</button>
+        <button (click)="removeAvaibalityroom(i)">Remove</button>
+      </div>
+    </div>
+    <button type="submit" (click)="Onsubmit()">Submit</button>
+  </form>
